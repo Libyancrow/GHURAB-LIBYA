@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+:root { color-scheme: dark; --cyan:#12baff; --bg:#020810; }
+* { box-sizing:border-box; }
+html, body { margin:0; min-height:100%; background:var(--bg); color:#f6fbff; font-family:'Cairo',Tahoma,Arial,sans-serif; }
+body { min-height:100vh; }
+.topbar { height:72px; padding:0 clamp(18px,5vw,72px); display:flex; justify-content:space-between; align-items:center; background:rgba(1,8,15,.94); border-bottom:1px solid rgba(18,186,255,.6); position:relative; z-index:2; }
+.brand { color:#fff; text-decoration:none; display:flex; gap:12px; align-items:center; font-size:clamp(20px,3vw,30px); font-weight:900; }
+.brand b { color:var(--cyan); }
+.bird { color:var(--cyan); font-size:34px; transform:rotate(-15deg); }
+.flag { width:54px; height:34px; border-radius:5px; overflow:hidden; position:relative; box-shadow:0 0 16px #000; }
+.flag i { display:block; height:33.333%; }
+.flag i:nth-child(1) { background:#e51d35; } .flag i:nth-child(2) { background:#05070b; } .flag i:nth-child(3) { background:#16833c; }
+.flag span { position:absolute; top:7px; left:16px; font-size:13px; color:white; direction:ltr; }
+.hero { min-height:calc(100vh - 108px); position:relative; display:flex; flex-direction:column; justify-content:center; align-items:center; overflow:hidden; padding:54px 18px 40px; background:#020810 url('assets/ghurab-libya-hero.png') center 43%/cover no-repeat; }
+.hero-shade { position:absolute; inset:0; background:linear-gradient(90deg,rgba(0,5,12,.48),rgba(0,5,12,.25) 50%,rgba(0,5,12,.6)),linear-gradient(0deg,#020810 0%,transparent 28%,rgba(0,5,12,.14) 100%); }
+.hero-content { position:relative; z-index:1; width:min(100%,760px); text-align:center; }
+.eyebrow { color:#c4eaff; font-size:clamp(13px,2vw,18px); margin:0 0 10px; }
+h1 { font-size:clamp(48px,10vw,100px); line-height:1.2; margin:0; font-weight:900; text-shadow:0 0 28px rgba(18,186,255,.45); }
+h1 span { color:var(--cyan); }
+.subtitle { margin:4px 0 28px; font-size:clamp(17px,3vw,24px); color:#d8edff; }
+.version-card { margin:0 auto; width:min(100%,560px); padding:18px 26px 14px; display:grid; grid-template-columns:1fr 2px 1.2fr; grid-template-rows:auto auto; align-items:center; gap:8px 20px; background:rgba(0,7,15,.86); border:1px solid var(--cyan); border-radius:16px; box-shadow:0 0 28px rgba(18,186,255,.22),inset 0 0 22px rgba(18,186,255,.06); }
+.ps4 { font-size:clamp(30px,6vw,48px); font-weight:900; direction:ltr; }
+.ps4 span { font-size:.8em; letter-spacing:4px; }
+.vline { grid-column:2; grid-row:1; height:58px; background:var(--cyan); }
+.version { grid-column:3; grid-row:1; direction:ltr; font-size:clamp(42px,9vw,74px); line-height:1.1; font-weight:900; color:var(--cyan); text-shadow:0 0 18px rgba(18,186,255,.4); }
+.date { grid-column:1/4; direction:ltr; display:flex; justify-content:center; gap:12px; align-items:center; font-size:clamp(18px,4vw,27px); font-weight:700; }
+.date span { color:var(--cyan); }
+.note { color:#a8dfff; margin:18px 0 10px; }
+.status-card { width:min(100%,560px); margin:0 auto; display:flex; align-items:flex-start; gap:12px; text-align:right; padding:15px 18px; background:rgba(1,8,16,.83); border:1px solid rgba(18,186,255,.38); border-radius:12px; }
+.status-dot { flex:0 0 10px; width:10px; height:10px; border-radius:50%; margin-top:8px; background:#ffca52; box-shadow:0 0 12px #ffca52; }
+.status-card strong { color:#fff; }
+.status-card p { margin:4px 0 0; color:#c8d9e7; line-height:1.8; font-size:14px; }
+.bottom-mark { position:relative; z-index:1; margin-top:34px; display:flex; align-items:center; gap:16px; color:var(--cyan); font-weight:700; }
+.bottom-mark span { width:54px; height:1px; background:var(--cyan); }
+footer { text-align:center; padding:18px 10px; color:#8295a5; font-size:12px; background:#020810; }
+@media(max-width:520px) {
+ .topbar { height:62px; }
+ .hero { min-height:calc(100vh - 94px); padding:40px 14px 30px; background-position:center center; }
+ .version-card { padding:14px 14px 12px; gap:8px 12px; }
+ .status-card { padding:12px; }
+}
